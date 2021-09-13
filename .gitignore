@@ -1,151 +1,81 @@
-# emacs files
-*~
-*\#
-.tramp_history
-
-# vim cache files
-*.swp
-
-# auto generated files
-*.logrt
-
-/build
-/build_*
-/build-*
-/tests/venv
-
-# logs
-*.log
-*.stderr
-*.stdout
-
-/docs/build
-/docs/publish
-/docs/edit
-/docs/website
-/docs/venv
-/docs/tools/venv
-/docs/tools/translate/venv
-/docs/tools/translate/output.md
-/docs/en/single.md
-/docs/ru/single.md
-/docs/zh/single.md
-/docs/ja/single.md
-/docs/fa/single.md
-/docs/en/development/cmake-in-clickhouse.md
-
-# callgrind files
-callgrind.out.*
-
-# ignore kdevelop files
-*.kdev4
-*.kdev_include_paths
-
-# ignore sublime project files
-*.sublime-*
-
-# Qt Creator files
-*.user
-
-# ignore perf output
-*/perf.data
-
-# ignore build files
-CMakeCache.txt
-CMakeFiles
-Makefile
-cmake_install.cmake
-CTestTestfile.cmake
-*.a
-*.o
-cmake-build-*
-
-# Python cache
-*.pyc
-__pycache__
-*.pytest_cache
-
-test.cpp
-CPackConfig.cmake
-CPackSourceConfig.cmake
-
-*-preprocessed.xml
-
-core
-!core/
-vgcore*
-
-*.deb
-*.build
-*.upload
-*.changes
-build-stamp
-configure-stamp
-
-*.bin
-*.mrk
-*.mrk2
-*.mrk3
-
-.dupload.conf
-
-# Netbeans project files
-nbproject/*
-
-# JetBrains project files
 .idea
-
-# Microsoft Visual Studio Code
-.vscode
-
-config-preprocessed.xml
-
-# Protobuf
-*.pb.cpp
-*.pb.h
-
-# Ignore symlink to private repository
-/private
-
-# Gulp dependencies used to minify website
-node_modules
-public
-website/docs
-website/presentations
-website/package-lock.json
-.DS_Store
-*/.DS_Store
-
-# cquery cache
-/.cquery-cache
-
-# ccls cache
-/.ccls-cache
-
-# clangd cache
-/.clangd
-/.cache
-
-/compile_commands.json
-
-# Toolchains
-/cmake/toolchain/*
-
-# ANTLR extension cache
-.antlr
-
-# ANTLR generated files
-/src/Parsers/New/*.interp
-/src/Parsers/New/*.tokens
-/src/Parsers/New/ClickHouseParserBaseVisitor.*
-
-# pytest-profiling
-/prof
-
+*.iws
 *.iml
+*.ipr
+out/
 
-# data store
-/programs/server/data
-/programs/server/metadata
-/programs/server/store
 
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,windows
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,windows
