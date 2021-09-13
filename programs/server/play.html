@@ -316,7 +316,7 @@
 
 <body>
     <div id="inputs">
-        <input class="monospace shadow" id="url" type="text" value="http://localhost:8123/" /><input class="monospace shadow" id="user" type="text" value="default" /><input class="monospace shadow" id="password" type="password" />
+        <input class="monospace shadow" id="url" type="text" value="http://localhost:8123/" /><input class="monospace shadow" id="user" type="text" value="{{ env `CLICKHOUSE_USER` }}" /><input class="monospace shadow" id="password" type="password" value="{{ env `CLICKHOUSE_PASSWORD` }}" />
     </div>
     <div>
         <textarea autofocus spellcheck="false" class="monospace shadow" id="query"></textarea>
@@ -355,7 +355,7 @@
         document.getElementById('url').value = server_address;
     } else if (location.protocol != 'file:') {
         /// Substitute the address of the server where the page is served.
-        document.getElementById('url').value = location.origin;
+        document.getElementById('url').value = location.href.substring(0, location.href.lastIndexOf('/'));
     }
 
     /// Substitute user name if it's specified in the query string
@@ -402,11 +402,7 @@
                     };
                     const title = "ClickHouse Query: " + query;
 
-                    let history_url = window.location.pathname + '?user=' + encodeURIComponent(user);
-                    if (server_address != location.origin) {
-                        /// Save server's address in URL if it's not identical to the address of the play UI.
-                        history_url += '&url=' + encodeURIComponent(server_address);
-                    }
+                    let history_url = window.location.pathname;
                     history_url += '#' + window.btoa(query);
 
                     if (previous_query == '') {
