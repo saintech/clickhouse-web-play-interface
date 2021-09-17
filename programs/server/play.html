@@ -355,7 +355,7 @@
         document.getElementById('url').value = server_address;
     } else if (location.protocol != 'file:') {
         /// Substitute the address of the server where the page is served.
-        document.getElementById('url').value = location.href.substring(0, location.href.lastIndexOf('/'));
+        document.getElementById('url').value = location.protocol+'//'+location.hostname+location.pathname.substring(0, location.pathname.lastIndexOf('/'));
     }
 
     /// Substitute user name if it's specified in the query string
